@@ -1,37 +1,76 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Feihan Huang（黄飞涵）的个人学术主页。" />
-<meta name="author" content="Feihan Huang" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Feihan Huang（黄飞涵）的个人学术主页。">
+<meta name="author" content="Feihan Huang">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; media-src 'none'; manifest-src 'none'; upgrade-insecure-requests">
 <title>Feihan Huang | 黄飞涵</title>
-<style>
-:root{--bg:#fff;--text:#202124;--muted:#62666d;--line:#e7e9ec;--link:#0b63ce;--soft:#f7f8fa;--accent:#111827}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;line-height:1.72;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}.page{width:min(960px,calc(100% - 40px));margin:0 auto;padding:54px 0 72px}.top{display:grid;grid-template-columns:1fr 120px;gap:34px;align-items:start;padding-bottom:26px;border-bottom:1px solid var(--line)}.name{margin:0;font-size:clamp(34px,5vw,48px);line-height:1.08;letter-spacing:-.03em;font-weight:760;color:var(--accent)}.cn-name{margin-left:10px;font-size:.52em;font-weight:560;color:var(--muted);vertical-align:.13em;letter-spacing:0}.headline{margin:13px 0 0;font-size:17px;color:#3f4650}.intro{margin:16px 0 0;max-width:720px;color:#343a42}.links{display:flex;flex-wrap:wrap;gap:8px 15px;margin-top:15px;font-size:15px}.links a{font-weight:550}.avatar{width:112px;height:112px;border-radius:50%;background:#f0f2f5;border:1px solid #e3e5e8;display:grid;place-items:center;color:#384152;font-size:31px;font-weight:720;letter-spacing:-.04em;user-select:none}.nav{display:flex;flex-wrap:wrap;gap:12px 20px;margin:19px 0 0;font-size:14px;color:var(--muted)}.nav a{color:var(--muted)}section{padding-top:36px}h2{margin:0 0 17px;font-size:23px;line-height:1.25;color:var(--accent);letter-spacing:-.012em}.section-rule{height:1px;background:var(--line);margin-bottom:22px}.edu-row,.timeline-row{display:grid;grid-template-columns:160px 1fr;gap:24px;align-items:start;padding:13px 0}.date{color:var(--muted);font-size:14px;white-space:nowrap;padding-top:2px}.item-title{font-size:17px;font-weight:680;color:#20242a}.item-subtitle{margin-top:3px;color:#4d535c}.item-desc{margin-top:7px;color:#3e444c}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px;max-width:620px}.stat{padding:13px 15px;background:var(--soft);border:1px solid #eceef1;border-radius:9px}.stat-label{color:var(--muted);font-size:13px}.stat-value{margin-top:1px;font-size:18px;font-weight:720;color:#1f252d}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:34px}.clean-list{margin:0;padding-left:20px}.clean-list li{margin:7px 0}.score-list{display:grid;grid-template-columns:1fr;gap:8px}.score-row{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed #e7e9ec;padding-bottom:7px}.score-row:last-child{border-bottom:none}.score{color:#343a42;font-weight:650;white-space:nowrap}.project{padding:20px 0 22px;border-bottom:1px solid var(--line)}.project:first-of-type{padding-top:2px}.project:last-of-type{border-bottom:none;padding-bottom:0}.project-head{display:grid;grid-template-columns:160px 1fr;gap:24px}.project-title{font-size:17px;font-weight:700;line-height:1.55}.project-title a::after{content:" ↗";font-size:.85em;font-weight:600}.project-desc{margin:8px 0 0;color:#414750}.tag{display:inline-block;margin:9px 6px 0 0;padding:2px 8px;border-radius:999px;background:#f3f5f7;color:#5a616b;font-size:12px;border:1px solid #e7e9ec}.footer{margin-top:54px;padding-top:18px;border-top:1px solid var(--line);color:#7a8088;font-size:13px}@media(max-width:720px){.page{width:min(100% - 30px,960px);padding-top:32px}.top{grid-template-columns:1fr;gap:20px}.avatar{order:-1;width:88px;height:88px;font-size:25px}.edu-row,.timeline-row,.project-head{grid-template-columns:1fr;gap:5px}.two-col,.stats{grid-template-columns:1fr}.date{padding-top:0}section{padding-top:31px}}
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <main class="page">
 <header class="top">
-<div>
-<h1 class="name">Feihan Huang <span class="cn-name">黄飞涵</span></h1>
+<h1 class="name">Feihan Huang <span class="cn-name">「黄飞涵」</span></h1>
 <p class="headline">广州软件学院 · 软件工程 · 本科二年级</p>
 <p class="intro">目前就读于广州软件学院软件工程专业，关注人工智能、深度学习与软件系统实践。在课程学习之外，我持续参与算法竞赛、数学建模、AI 应用与工程项目，并重视从模型、代码到系统联调的完整实现过程。</p>
-<div class="links"><a href="mailto:feihanhuang01@gmail.com">Email</a><a href="https://github.com/huangfeihan659-sys" target="_blank" rel="noopener noreferrer">GitHub</a></div>
-<nav class="nav" aria-label="页面导航"><a href="#education">教育背景</a><a href="#coursework">课程与技能</a><a href="#competitions">比赛经历</a><a href="#projects">项目经历</a></nav>
+<div class="contact">
+<div><strong>Email：</strong>feihanhuang01@gmail.com</div>
+<div><strong>GitHub：</strong><a href="https://github.com/huangfeihan659-sys" target="_blank" rel="noopener noreferrer">huangfeihan659-sys</a></div>
 </div>
-<div class="avatar" aria-label="Feihan Huang initials">FH</div>
+<nav class="nav" aria-label="页面导航">
+<a href="#education">教育背景</a><a href="#coursework">课程与技能</a><a href="#competitions">比赛经历</a><a href="#projects">项目经历</a>
+</nav>
 </header>
-<section id="education"><h2>教育背景</h2><div class="section-rule"></div><div class="edu-row"><div class="date">2025.09 — 2029.06</div><div><div class="item-title">广州软件学院</div><div class="item-subtitle">软件工程 · 本科</div><div class="item-desc">目前本科大二在读。</div><div class="stats"><div class="stat"><div class="stat-label">GPA</div><div class="stat-value">3.8 / 5.0</div></div><div class="stat"><div class="stat-label">专业排名</div><div class="stat-value">2 / 150</div></div></div></div></div></section>
-<section id="coursework"><h2>课程与技能</h2><div class="section-rule"></div><div class="two-col"><div><div class="item-title" style="margin-bottom:12px;">课程与成绩</div><div class="score-list"><div class="score-row"><span>高等数学 I</span><span class="score">满分</span></div><div class="score-row"><span>高等数学 II</span><span class="score">满分</span></div><div class="score-row"><span>计算机与人工智能导论</span><span class="score">96</span></div><div class="score-row"><span>C 语言</span><span class="score">91</span></div></div><div class="item-title" style="margin-top:22px;margin-bottom:8px;">主修课程</div><ul class="clean-list"><li>数据结构与算法</li><li>深度学习</li><li>生成式人工智能</li></ul></div><div><div class="item-title" style="margin-bottom:12px;">专业技能</div><ul class="clean-list"><li>英语：CET-4</li><li>编程：Python、C++</li><li>AI 辅助开发：Vibe Coding</li></ul></div></div></section>
-<section id="competitions"><h2>比赛经历</h2><div class="section-rule"></div><div class="timeline-row"><div class="date">2026.09</div><div class="item-title">全国大学生数学建模竞赛</div></div><div class="timeline-row"><div class="date">2026.09</div><div class="item-title">ICPC Asia EC 网络预选赛</div></div><div class="timeline-row"><div class="date">2026.05</div><div class="item-title">“御网杯”网络安全大赛</div></div><div class="timeline-row"><div class="date">2025.11</div><div class="item-title">华为 ICT 大赛（昇腾 AI 赛道）</div></div></section>
-<section id="projects"><h2>项目经历</h2><div class="section-rule"></div>
-<article class="project"><div class="project-head"><div class="date">2026.07 — 2026.09</div><div><div class="project-title"><a href="https://github.com/huangfeihan659-sys/campus-waste-classification-system" target="_blank" rel="noopener noreferrer">智分校园——基于深度学习的校园垃圾智能分类与投放校验系统</a></div><p class="project-desc">作为项目负责人，统筹轻量化视觉识别模型、前后端、SQLite 数据库与智能垃圾桶硬件联调，实现校园垃圾四分类识别、投放正确性校验、红外满载检测，以及识别记录与设备状态管理。</p><span class="tag">Deep Learning</span><span class="tag">SQLite</span><span class="tag">System Integration</span></div></div></article>
-<article class="project"><div class="project-head"><div class="date">2026.06</div><div><div class="project-title"><a href="https://github.com/huangfeihan659-sys/plane-war-pro" target="_blank" rel="noopener noreferrer">基于 Python 与 Pygame 的多关卡飞机大战游戏系统设计与实现</a></div><p class="project-desc">独立使用 Python/Pygame 设计并实现多关卡飞机大战游戏，采用面向对象与模块化架构完成玩家、敌机、Boss、子弹、道具、碰撞检测、关卡递进及最高分存档等核心功能。</p><span class="tag">Python</span><span class="tag">Pygame</span><span class="tag">OOP</span></div></div></article>
-<article class="project"><div class="project-head"><div class="date">2026.03</div><div><div class="project-title">泰迪工作室数据挖掘项目</div><p class="project-desc">完成基于运营商用户数据的 5G 套餐潜在客户识别，涵盖数据清洗、特征工程、集成学习建模与交叉验证优化，并形成潜在客户筛选及营销策略建议。</p><span class="tag">Data Mining</span><span class="tag">Feature Engineering</span><span class="tag">Ensemble Learning</span></div></div></article>
-<article class="project"><div class="project-head"><div class="date">2025.11</div><div><div class="project-title">百度飞桨高质量语料项目</div><p class="project-desc">面向上海话影视语料，完成字幕与对应音频片段的提取、切分及毫秒级时间戳对齐，构建高质量方言语音—文本配对数据。</p><span class="tag">PaddlePaddle</span><span class="tag">Speech-Text Data</span><span class="tag">Data Processing</span></div></div></article>
+
+<section id="education"><h2>教育背景</h2><div class="section-rule"></div>
+<div class="edu-row"><div class="date">2025.09 — 2029.06</div><div>
+<div class="item-title">广州软件学院</div><div class="item-subtitle">软件工程 · 本科</div><div class="item-desc">目前本科大二在读。</div>
+<div class="stats"><div class="stat"><div class="stat-label">GPA</div><div class="stat-value">3.8 / 5.0</div></div><div class="stat"><div class="stat-label">专业排名</div><div class="stat-value">2 / 150</div></div></div>
+</div></div></section>
+
+<section id="coursework"><h2>课程与技能</h2><div class="section-rule"></div>
+<div class="two-col"><div><div class="item-title subhead-gap">课程与成绩</div><div class="score-list">
+<div class="score-row"><span>高等数学 I</span><span class="score">满分</span></div>
+<div class="score-row"><span>高等数学 II</span><span class="score">满分</span></div>
+<div class="score-row"><span>计算机与人工智能导论</span><span class="score">96</span></div>
+<div class="score-row"><span>C 语言</span><span class="score">91</span></div>
+</div><div class="item-title subhead-spaced">主修课程</div><ul class="clean-list"><li>数据结构与算法</li><li>深度学习</li><li>生成式人工智能</li></ul></div>
+<div><div class="item-title subhead-gap">专业技能</div><ul class="clean-list"><li>英语：CET-4</li><li>编程：Python、C++</li><li>AI 辅助开发：Vibe Coding</li></ul></div></div></section>
+
+<section id="competitions"><h2>比赛经历</h2><div class="section-rule"></div>
+<div class="timeline-row"><div class="date">2026.09</div><div class="item-title">全国大学生数学建模竞赛</div></div>
+<div class="timeline-row"><div class="date">2026.09</div><div class="item-title">ICPC Asia EC 网络预选赛</div></div>
+<div class="timeline-row"><div class="date">2026.05</div><div class="item-title">“御网杯”网络安全大赛</div></div>
+<div class="timeline-row"><div class="date">2025.11</div><div class="item-title">华为 ICT 大赛（昇腾 AI 赛道）</div></div>
 </section>
+
+<section id="projects"><h2>项目经历</h2><div class="section-rule"></div>
+<article class="project"><div class="project-head"><div class="date">2026.07 — 2026.09</div><div>
+<div class="project-title"><a href="https://github.com/huangfeihan659-sys/campus-waste-classification-system" target="_blank" rel="noopener noreferrer">智分校园——基于深度学习的校园垃圾智能分类与投放校验系统</a></div>
+<p class="project-desc">作为项目负责人，统筹轻量化视觉识别模型、前后端、SQLite 数据库与智能垃圾桶硬件联调，实现校园垃圾四分类识别、投放正确性校验、红外满载检测，以及识别记录与设备状态管理。</p>
+<span class="tag">Deep Learning</span><span class="tag">SQLite</span><span class="tag">System Integration</span>
+</div></div></article>
+
+<article class="project"><div class="project-head"><div class="date">2026.06</div><div>
+<div class="project-title"><a href="https://github.com/huangfeihan659-sys/plane-war-pro" target="_blank" rel="noopener noreferrer">基于 Python 与 Pygame 的多关卡飞机大战游戏系统设计与实现</a></div>
+<p class="project-desc">独立使用 Python/Pygame 设计并实现多关卡飞机大战游戏，采用面向对象与模块化架构完成玩家、敌机、Boss、子弹、道具、碰撞检测、关卡递进及最高分存档等核心功能。</p>
+<span class="tag">Python</span><span class="tag">Pygame</span><span class="tag">OOP</span>
+</div></div></article>
+
+<article class="project"><div class="project-head"><div class="date">2026.03</div><div>
+<div class="project-title">泰迪工作室数据挖掘项目</div><p class="project-desc">完成基于运营商用户数据的 5G 套餐潜在客户识别，涵盖数据清洗、特征工程、集成学习建模与交叉验证优化，并形成潜在客户筛选及营销策略建议。</p>
+<span class="tag">Data Mining</span><span class="tag">Feature Engineering</span><span class="tag">Ensemble Learning</span>
+</div></div></article>
+
+<article class="project"><div class="project-head"><div class="date">2025.11</div><div>
+<div class="project-title">百度飞桨高质量语料项目</div><p class="project-desc">面向上海话影视语料，完成字幕与对应音频片段的提取、切分及毫秒级时间戳对齐，构建高质量方言语音—文本配对数据。</p>
+<span class="tag">PaddlePaddle</span><span class="tag">Speech-Text Data</span><span class="tag">Data Processing</span>
+</div></div></article>
+</section>
+
 <footer class="footer">© 2026 Feihan Huang · Powered by GitHub Pages</footer>
 </main>
 </body>
