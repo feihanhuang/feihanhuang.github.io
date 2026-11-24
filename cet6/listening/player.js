@@ -106,9 +106,16 @@ function play(row) {
     current = row;
   }
   notice.hidden = true;
+  if (!audio.hasAttribute("src")) audio.src = audio.dataset.src;
   if (!resume) {
     pendingSeek = audio.readyState < HTMLMediaElement.HAVE_METADATA ? row : null;
-    if (!pendingSeek) audio.currentTime = row.start;
+    if (!pendingSeek) {
+      audio.currentTime = row.start;
+    } else {
+      // Also provide the target immediately on browsers that support seeking
+      // before metadata is ready. The metadata event covers other browsers.
+      try { audio.currentTime = row.start; } catch { /* Applied when ready. */ }
+    }
   }
   audio.playbackRate = rates[row.speed];
 
@@ -241,18 +248,8 @@ audio.addEventListener("ended", () => {
 });
 audio.addEventListener("error", () => announce("音频暂时不可用，请刷新后重试。"));
 
-async function initialize() {
-  try {
-    if (embeddedData) {
-      render(JSON.parse(embeddedData.textContent));
-      return;
-    }
-    const response = await fetch(container.dataset.track);
-    if (!response.ok) throw new Error("Listening data unavailable");
-    render(await response.json());
-  } catch {
-    announce("暂时无法载入听力，请刷新后重试。");
-  }
+try {
+  render(JSON.parse(embeddedData.textContent));
+} catch {
+  announce("暂时无法载入听力，请刷新后重试。");
 }
-
-initialize();
