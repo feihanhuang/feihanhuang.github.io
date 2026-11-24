@@ -4,6 +4,7 @@ const audio = document.getElementById("recording");
 const container = document.getElementById("passages");
 const notice = document.getElementById("notice");
 const embeddedData = document.getElementById("listening-data");
+const clipDirectory = container.dataset.clips;
 const rates = [1, 2, 0.5];
 const speedLabels = ["1×", "2×", "½×"];
 const captions = ["隐藏", "英文", "中文", "中英双语"];
@@ -97,7 +98,8 @@ function checkEnd() {
 function play(row) {
   const previous = current;
   const changed = previous !== row;
-  const resume = !changed && !audio.ended && audio.currentTime >= row.start - 0.04
+  const sourceChanged = audio.getAttribute("src") !== row.source;
+  const resume = !changed && !sourceChanged && !audio.ended && audio.currentTime >= row.start - 0.04
     && audio.currentTime < row.end - 0.025;
   const attempt = ++playbackAttempt;
   if (changed) {
@@ -106,9 +108,9 @@ function play(row) {
     current = row;
   }
   notice.hidden = true;
-  if (!audio.hasAttribute("src")) audio.src = audio.dataset.src;
+  if (sourceChanged) audio.src = row.source;
   if (!resume) {
-    pendingSeek = audio.readyState < HTMLMediaElement.HAVE_METADATA ? row : null;
+    pendingSeek = sourceChanged || audio.readyState < HTMLMediaElement.HAVE_METADATA ? row : null;
     if (!pendingSeek) {
       audio.currentTime = row.start;
     } else {
@@ -168,7 +170,7 @@ function button(action, handler) {
   return control;
 }
 
-function sentence([start, end, english, chinese], title, groupNumber, lineNumber) {
+function sentence([start, end, english, chinese, clipRange], title, groupNumber, lineNumber) {
   const item = document.createElement("li");
   item.className = "sentence";
   const controls = document.createElement("div");
@@ -178,8 +180,12 @@ function sentence([start, end, english, chinese], title, groupNumber, lineNumber
   number.textContent = String(lineNumber);
   number.setAttribute("aria-hidden", "true");
 
+  const numberInFile = String(groupNumber).padStart(2, "0") + "-" + String(lineNumber).padStart(3, "0");
   const row = {
-    start, end, item,
+    start: clipRange ? clipRange[0] : start,
+    end: clipRange ? clipRange[1] : end,
+    source: clipDirectory ? clipDirectory + numberInFile + ".mp3" : audio.dataset.src,
+    item,
     loop: false, speed: 0, captionState: 0,
     description: title + "，第 " + lineNumber + " 句",
     english: caption("en", english, "en-" + groupNumber + "-" + lineNumber),
